@@ -241,6 +241,9 @@ class Table4 extends Component {
         )
     }
 }
+const handleAnchorClick = (e, link) => {
+    e.preventDefault()
+}
 
 const TableView = () => (
     <Layout className='animated fadeIn'>
@@ -255,7 +258,7 @@ const TableView = () => (
         </div>
 
         <Row>
-            <Anchor className='toc-affix'>
+            <Anchor onClick={handleAnchorClick} className='toc-affix'>
                 <Link href='#basic' title='基础表格' />
                 <Link href='#JSX' title='JSX表格' />
                 <Link href='#checked' title='可选表格' />
